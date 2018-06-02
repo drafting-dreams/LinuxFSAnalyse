@@ -1,5 +1,5 @@
 import urllib.request, os
-from utils import walk_dir
+from utils import walk_dir_unzip
 from spider import getAllFilesUrls
 
 urls = getAllFilesUrls()
@@ -17,5 +17,5 @@ for url in urls:
 
     print(local_filename)
 
-walk_dir('..\\kernel')
+walk_dir_unzip('..\\kernel')
 

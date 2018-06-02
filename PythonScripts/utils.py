@@ -2,7 +2,7 @@ import gzip
 import shutil
 import os
 
-def walk_dir(root):
+def walk_dir_unzip(root):
     # rootDir = '..\\kernel'
     for dirName, subdirList, fileList in os.walk(root):
         print('Found directory: %s' % dirName)
