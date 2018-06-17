@@ -1,0 +1,32 @@
+acl.c 访问控制列表（Access Control List，ACL） 是路由器和交换机接口的指令列表，用来控制端口进出的数据包。ACL适用于所有的被路由协议
+file.c jfs fs regular file handling primitives
+inode.c 有关i节点
+ioctl.c 是设备驱动程序中对设备的I/O通道进行管理的函数
+jfs_debug.c
+jfs_discard.c
+jfs_dmap.c block
+jfs_dtree.c jfs_dtree.c: directory B+-tree manager
+jfs_extent.c  Extents save space by reducing the amount of metadata needed to keep track of the data blocks for large files.
+jfs_imap.c jfs_imap.c: inode allocation map manager
+jfs_inode.c 有关i节点
+jfs_logmgr.c log manager
+jfs_metaPage.c 内存 页
+jfs_mount.c file
+jfs_txnmgr.c transaction manager
+jfs_umount.c file
+jfs_unicode.c other
+jfs_uniupr.c other
+jfs_xtree.c extent allocation descriptor B+-tree manager
+namei.c 列出路径信息的函数
+super.c contains code to handle: - mount structures - super-block tables - filesystem drivers list - mount system call - umount system call - ustat system call
+symlink.c jfs symlink handling code  a symbolic link (also symlink or soft link) is a term for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution
+xattr.c Extended attributes for symlinks and special files added per suggestion of Luka Renko
+
+目录结构：jfs_dtree.c namei.c
+网络：acl.c
+块管理：jfs_dmap.c jfs_extent.c jfs_xtree.c super.c
+i节点：inode.c jfs_inode.c jfs_imap.c
+文件：file.c jfs_mount.c jfs_unmount.c
+IO：ioctl.c jfs_metaPage.c
+扩展：xattr.c
+其他：jfs_debug.c jfs_discard.c jfs_logmgr.c jfs_txnmgr.c jfs_unicode.c jfs_unupr.c symlink.c

@@ -1,0 +1,31 @@
+ext 3
+
+dir.c directory handling functions
+acl.c 访问控制列表（Access Control List，ACL） 是路由器和交换机接口的指令列表，用来控制端口进出的数据包。ACL适用于所有的被路由协议
+balloc.c contains the blocks allocation and deallocation routines
+ext3_jbd.c Interface between ext3 and JBD. Journaling block device is a generic block device journaling layer in the Linux kernel.
+file.c ext3 fs regular file handling primitives
+fsync.c 大多数磁盘I/O都通过缓冲进行. fsync函数只对由文件描述符filedes指定的单一文件起作用，并且等待写磁盘操作结束，然后返回。fsync可用于数据库这样的应用程序，这种应用程序需要确保将修改过的块立即写到磁盘上。
+hash.c 有关哈希值的
+ialloc.c 有关i节点的分配
+indirect.c about indirect block
+inode.c 有关i节点
+ioctl.c 是设备驱动程序中对设备的I/O通道进行管理的函数
+namei.c 列出路径信息的函数
+resize.c Support for resizing an ext3 filesystem while it is mounted.
+super.csuper.c contains code to handle: - mount structures - super-block tables - filesystem drivers list - mount system call - umount system call - ustat system call
+symlink.c ext3 symlink handling code  a symbolic link (also symlink or soft link) is a term for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution
+xattr.c Extended attributes for symlinks and special files added per suggestion of Luka Renko
+xattr_security.c  Handler for storing security labels as extended attributes
+xattr_trusted.c Handler for trusted extended attributes
+xattr_user.c Handler for extended user attributes
+
+目录结构：dir.c namei.c
+网络：acl.c
+块管理：balloc.c ext3_jbd.c super.c
+i节点：inode.c inline.c
+文件：file.c
+IO：fsync.c ioctl.c
+扩展：xattr.c xattr_security.c xattr_user.c xattr_trusted.c
+其他：bitmap.c hash.c resize.c symlink.c
+
