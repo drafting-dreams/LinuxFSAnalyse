@@ -21,11 +21,10 @@ xattr_trusted.c Handler for trusted extended attributes
 xattr_user.c Handler for extended user attributes
 
 目录结构：dir.c namei.c
-网络：acl.c
 块管理：balloc.c ext3_jbd.c super.c
 i节点：inode.c inline.c
 文件：file.c
 IO：fsync.c ioctl.c
 扩展：xattr.c xattr_security.c xattr_user.c xattr_trusted.c
-其他：bitmap.c hash.c resize.c symlink.c
+其他：bitmap.c hash.c resize.c symlink.c acl.c
 

@@ -1,0 +1,82 @@
+Ｍakefile:包含一些规则告诉make编译哪些文件以及怎样编译这些文件
+Kconfig:在内核配置时候，作为配置选项
+ .config：进行内核配置的时候，经过配置后生成的内核编译参考文件
+kmem.c：使用xfs文件系统内存分配的通用方法
+mrlock.c:将dtb传递给内核时的机器设置@dt：dt blob的虚拟地址指针
+uuid.c:xfs文件系统的唯一标识获取设置文件
+xfs.h：xfs文件系统的基本预定义
+xfs_acl.c  xfs文件系统访问控制
+xfs_aops:定义xfs的地址空间操作和缓存处理
+xfs_attr.h:定义ntfs中对属性的处理
+xfs_attr_incative.c：查看逻辑区域中所有的扩展数据块的操作
+xfs_attr_list.c用于获取属性列表的条目
+xfs_bit.c：用于对内存高度缓冲区进行处理
+xfs_bmap_util.c：将给定的系统块转化成linux可识别的特定块
+xfs_buf.c：内存高速缓冲区的处理
+xfs_buf_item.c：xfs的日志格式大小
+xfs_dir2_readdir.c：linux内核支持的文件夹类型操作
+xfs_discard.c：对trim的支持操作
+xfs_dquot.c：用于释放所有与dquot相关的内存的操作
+xfs_dquot_item.c：用于释放单条与dquot相关的内存的操作
+xfs_error.c：用于加载错误的处理
+xfs.export.c：输出相关的操作
+xfs_export_busy.c：输出忙相关的操作处理
+xfs_extent_busy.c：在插入之前跟踪能够看到的失败的操作
+xfs_extfree_item.c：这将返回记录给定efi项目所需的iovecs数量。 我们只需要1个iovec即可使用efi项目。 它只记录efi_log_format结构。
+xfs_file.c：锁定读取和写入IO的基本单元以确保始终可以统一使用基员inode
+xfs_filestream.c：分配选择标识的操作
+xfs_fs.h:直接的IO属性记录，与XFS_IOC_DIOINFO一起使用
+xfs_fsops.c：对文件系统的基本操作
+xfs_globals.c：可调的XFS参数函数
+xfs_icache.c：分配并初始化inode的操作
+xfs_icreate_item.c：在内存日志中使用的结构定义
+xfs_inode.c：包含针对基于i节点和描述符结构的文件读写函数
+xfs_inode_item.c：返回所需的iocecs数量给指定的inode
+xfs_ioctl.c：实现字符设备的IO控制
+xfs_ioctl32.c：32位下实现字符设备的IO控制
+xfs_iomap.c：在使用-o swalloc选型安装时候，对其内存的大小到指定的宽度
+xfs_itable.c：返回系统的统计信息
+xfs_linux.c：内核的特定类型声明
+xfs_log.c：日志痕迹记录
+xfs_log_cil.c:将当前预留设置为零，以便知道窃取基本事务开销预留第一个事务提交
+xfs_log_priv.h:在空闲时候提交虚假事务的操作
+xfs_log_recover.c：对其扇区缓冲区用于缓冲区读写的操作
+xfs_message.c：早期内核版本中定义的日志功能
+xfs_mount.c：指定默认的最小读取和写入大小
+xfs_mru_cache.c：用于回到的指针类型以及释放客户端的数据指针的操作
+xfs_qm.c：用于quota check时候降低内存开销的操作
+xfs_qm_bhv.c：将目录树中的信息记录下来用于配额实施操作
+xfs_qm_syscalls.c：卸载硬盘时用以关闭所有的quota操作
+xfs_quotaops.c：xfs快速存储gpio控制的相关操作
+xfs_quota.c:文件系统的配额管理
+xfs_rtalloc.c：老版本内核中设置初始块大小的操作
+xfs_stats.c：老版本内核循环访问所有事的统计信息
+xfs_super.c：包含对文件系统超级块的处理
+xfs_symlink.c：老版本内核内核链接系统进程功能
+xfs_sysctl.c：设置和获得运行时内核的配置参数的模块
+xfs_sysfs.c：内核安装xfs的关键参数控制
+xfs_trace.c：跟踪点，在创建xfs文件系统的时候会自动创建跟踪点
+xfs_trans.c：xfs事务模块
+xfs_trans_ail.c：检查确认事务的状态的模块
+xfs_trans_buf.c：检查给定的缓存中的参数是否是所给的事务中的一部分
+xfs_trans_dquot.c：将加锁的dquot事务
+xfs_trans_extfree.c：用来分配扩展的事务相关操作
+xfs_trans_priv.h：老版本的内核中用来进行AIL遍历的操作
+xfs_types.h：定义内核驱动的特定类型
+xfs_xattr.c：将内核的系统调用转成xfs内部定义的attr标签
+
+功能分类：
+
+目录结构：xfs_qm_bhv.c
+块管理：xfs_attr_incative.c，xfs_mount.c， xfs_super.c，xfs_extfree_item.c，
+i节点：xfs_icache.c，xfs_inode.c，xfs_inode_item.c，xfs_rtalloc.c
+文件：xfs_dir2_readdir.c，xfs_discard.c，xfs_fsops.c，xfs_quota.c
+IO：xfs.export.c，xfs_export_busy.c，xfs_extent_busy.c，xfs_file.c，xfs_filestream.c，xfs_fs.h，xfs_ioctl.c，xfs_ioctl32.c，xfs_log_recover.c，xfs_aops，xfs_bit.c，xfs_bmap_util.c，xfs_buf.c，xfs_dquot.c，xfs_dquot_item.c，xfs_iomap.c，xfs_qm.c，
+xfs_quotaops.c
+扩展：xfs_attr.h，xfs_attr_list.c，xfs_buf_item.c，xfs_icreate_item.c，xfs_qm_syscalls.c，xfs_trace.c，xfs_trans.c，xfs_trans_ail.c，xfs_trans_buf.c，xfs_trans_dquot.c
+xfs_trans_extfree.c，xfs_trans_priv.h，，xfs_xattr.c
+其他：mrlock.c，kmem.c，uuid.c，xfs_globals.c，xfs_itable.c，xfs_linux.c，xfs_mru_cache.c，xfs_stats.c，
+，xfs_symlink.c，xfs_sysctl.c，xfs_sysfs.c，xfs_types.h，xfs_error.c，xfs_log.c，xfs_log_cil.c，
+xfs_log_priv.h，xfs_message.c
+
+

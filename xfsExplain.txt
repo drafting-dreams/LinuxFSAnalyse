@@ -1,0 +1,47 @@
+btrfs
+acl.c 访问控制列表（Access Control List，ACL） 是路由器和交换机接口的指令列表，用来控制端口进出的数据包。ACL适用于所有的被路由协议
+async-thread.c  Fix a use-after-free error for trace 异步线程
+backref.c  Allow backref walk to handle direct parent ref 允许后台访问来处理直接父级REF
+check-integrity.c  该模块用来捕获当BTrFS内核代码执行对磁盘的写入请求时所带来的文件系统不一致的状态。在这种状态下，功率损失或内核恐慌事件将导致磁盘上的数据丢失或至少损坏。
+compression.c  用于压缩
+ctree.c 
+delayed-inode.c 延迟索引节
+delayed-ref.c 延迟引用
+dev-replace.c  dev设备替换
+dir-item.c 新建目录
+disk-io.c 磁盘读写
+export.c 设置或显示环境变量
+extent-tree.c 区段树，和映射大文件到磁盘有关
+extent_io.c 区段的io
+extent_map.c 区段的映射
+file-item.c 和文件的新建有关
+file.c 管理文件
+free-space-cache.c空余空间缓存
+hash.c哈希值
+inode-item.c信息节点的项
+inode-map.c信息节点的映射
+inode.c信息节点
+ioctl.c 有关io
+
+目录结构：dir-item.c root-tree.c
+块管理： delayed-ref.c extent_map.c free-space-cache.c ctree.c relocation.c scrub.c ulist.c uuid-tree.c
+i节点：delayed-inode.c inode-item.c inode-map.c inode.c
+文件：file-item.c file.c qgroup.c 
+IO：check-integrity.c dev-replace.c disk-io.c extent_io.c ioctl.c ordered-data.c orphan.c print-tree.c  raid56.c reada.c send.c
+扩展：export.c  extent-tree.c props.c sysfs.c transaction.c  volumes.c xattr.c
+其他：async-thread.c，backref.c  compression.c hash.c locking.c lzo.c math.h tree-defrag.c tree-log.c zlib.c acl.c  
+
+
+reiserfs
+
+目录结构：dir.c
+块管理：bitmap.c  do_balan.c stree.c tail_conversion.c
+i节点：fix_node.c ibalance.c inode.c
+文件：file.c
+IO：ioctl.c prints.c super.c
+扩展：item_ops.c namei.c xattr.c xattr_acl.c xattr_trusted.c xattr_user.c
+其他：hashes.c lock.c objectid.c procfs.c resize.c
+
+
+
+
